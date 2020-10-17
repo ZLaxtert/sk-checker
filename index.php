@@ -1,24 +1,4 @@
-<?php 
-	session_start(); 
-        require 'server.php';
-
-	if (!isset($_SESSION['username'])) {
-		
-		header('location: ../login.php');
-	}
-
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: ../login.php");
-	}
-	
-	$username = $_SESSION['username'];
-$qUser = mysqli_query($db, "SELECT * FROM users WHERE username = '$username'");
-$fUser = mysqli_fetch_assoc($qUser);
-              
-             
-?>
+<?php ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,10 +59,10 @@ $fUser = mysqli_fetch_assoc($qUser);
 			            <li class="dropdown">
 			              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 			              <ul class="dropdown-menu">
-			              <li><a href="#"><?= $username; ?></a></li>
-			                <li><a href="#">(<?= $fUser['level']; ?>)</a></li>
-			                <li><a href="#"><span class="fas fa-dollar-sign"> <?= number_format($fUser['saldo'],0,',','.'); ?></a></li>
-			                <li class="divider"></li>
+			              <li><a href="#"></a></li>
+			                <li><a href="#">()</a></li>
+			                <li><a href="#"><span class="fas fa-dollar-sign">  
+                                        <li class="divider"></li>
 			                <li class="dropdown-header">Lainnya</li>
 			                <li class="nav-link"><a href="../index.php?logout='1'" class="fas fa-door-open">Log out</a></li>
                                          
