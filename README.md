@@ -6,7 +6,7 @@
 ## Install on localhost : 
 - Install XAMPP
 - Clone Repositories
-- Extract files in .htdocs folder folder
+- Extract files in .htdocs folder
 - then start XAMPP
 - And run on localhost
 - go to https://localhost/sk-checker/
